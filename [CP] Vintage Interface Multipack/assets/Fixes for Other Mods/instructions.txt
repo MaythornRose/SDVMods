@@ -1,0 +1,7 @@
+To use these with other mods:
+
+1. Pick out the image that matches the theme you are using.
+2. Remove the "_brown" or "_white" from the name.
+3. Copy and paste the image into the mod folder of the mod you wish to alter and allow it to overwrite.
+
+Remember that if you update any of the mods listed here that the image will be replaced and you will have to change it again.
