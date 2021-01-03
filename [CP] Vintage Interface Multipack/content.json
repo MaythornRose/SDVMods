@@ -1,5 +1,5 @@
 {
-  "Format": "1.18",
+  "Format": "1.19.0",
   "ConfigSchema": {
     "Theme Color": {
       "AllowValues": "brown, white",
@@ -20,6 +20,11 @@
       "AllowValues": "enabled, disabled",
       "Default": "enabled",
       "Description": "Enables Vintage UI for the billboard & special order board."
+    },
+    "Portrait - Just the Frame": {
+      "AllowValues": "enabled, disabled",
+      "Default": "disabled",
+      "Description": "Toggle this to 'enabled' if you want to use only the frame for the character portrait. Useful for compatibility with mods that change the background."
     },
     "Cursor Toggle": {
       "AllowValues": "enabled, disabled",
@@ -62,8 +67,25 @@
     {
       "LogName": "LooseSprites",
       "Action": "Load",
-      "Target": "LooseSprites/chatbox, LooseSprites/daybg, LooseSprites/dialogboxgreen, LooseSprites/languagebuttons, LooseSprites/nightbg, LooseSprites/textbox, LooseSprites/font_bold, LooseSprites/mobileatlas_manually_made",
+      "Target": "LooseSprites/chatbox, LooseSprites/dialogboxgreen, LooseSprites/languagebuttons, LooseSprites/textbox, LooseSprites/font_bold, LooseSprites/mobileatlas_manually_made",
       "FromFile": "assets/{{TargetWithoutPath}}_{{Theme}}.png"
+    },
+
+    // Character Portrait Changes
+    {
+      "LogName": "Portrait w/ frame",
+      "Action": "Load",
+      "Target": "LooseSprites/daybg, LooseSprites/nightbg",
+      "FromFile": "assets/{{TargetWithoutPath}}_{{Theme}}.png",
+      "When": {"Portrait - Just the Frame": "disabled" }
+    },
+    {
+      "LogName": "Frame Only",
+      "Action": "EditImage",
+      "Target": "LooseSprites/daybg, LooseSprites/nightbg",
+      "FromFile": "assets/frame_{{Theme}}.png",
+      "When": {"Portrait - Just the Frame": "enabled" },
+      "PatchMode": "Overlay"
     },
 
     // Special Orders Board Changes
