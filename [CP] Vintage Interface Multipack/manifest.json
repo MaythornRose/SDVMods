@@ -1,7 +1,7 @@
 {
   "Name": "Vintage Interface Multipack",
   "Author": "Maythorn, continuing from ManaKirel's work",
-  "Version": "1.2.2",
+  "Version": "1.2.3",
   "Description": "A pack of vintage-style interfaces for SDV",
 	"UniqueID": "Maythorn.VintageInterfaceMultipack",
 	"MinimumApiVersion": "3.7.0",
