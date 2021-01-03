@@ -1,0 +1,12 @@
+{
+  "Name": "Gray Pelican",
+  "Author": "Maythorn",
+  "Version": "1.0.0",
+  "Description": "A gray and more life-like pelican for the title screen.",
+	"UniqueID": "maythorn.GrayPelican",
+	"MinimumApiVersion": "3.7.0",
+	"ContentPackFor": {
+	"UniqueID": "Pathoschild.ContentPatcher"
+	},
+	"UpdateKeys": ["Nexus: 7472"]
+}

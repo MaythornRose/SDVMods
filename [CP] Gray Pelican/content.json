@@ -1,0 +1,22 @@
+{"Format": "1.18",
+"ConfigSchema": {
+  "Pelican": {
+    "AllowValues": "enabled, disabled",
+    "Default": "enabled",
+    "Description": "Replaces the pelican on the title screen."
+    },
+  },
+"Changes": [
+
+  // Title Screen Pelican
+  {
+    "LogName": "Pelican",
+    "Action": "EditImage",
+    "Target": "Minigames/TitleButtons",
+    "FromFile": "assets/pelican.png",
+    "ToArea":{ "X": 296, "Y": 226, "Width": 104, "Height": 26 },
+    "PatchMode": "Replace",
+    "When": { "Pelican": "enabled" }
+    },
+  ]
+}
